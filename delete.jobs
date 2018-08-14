@@ -1,0 +1,21 @@
+#!/bin/bash
+for i in {1..250}
+do
+	tower-cli job delete $i
+done
+for x in {1..100}
+do
+	tower-cli job_template delete $x
+done
+for s in {1..100}
+do
+	tower-cli project delete $s
+done
+for q in {1..20}
+do
+	tower-cli host delete $q
+done
+for u in {1..10}
+do
+	tower-cli inventory delete $u
+done
